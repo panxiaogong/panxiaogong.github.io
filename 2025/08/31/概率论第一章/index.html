@@ -20,30 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Per Aspera Ad Astra">
-<meta property="og:type" content="website">
-<meta property="og:title" content="潘小工的小屋">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="第八周作业first half基础部分A1解：（1）由题，矩阵表示为：$$\begin{bmatrix}1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\0&amp;1&amp;0&amp;1&amp;1&amp;1&amp;0&amp;1\0&amp;0&amp;1&amp;0&amp;1&amp;0&amp;1&amp;1\0&amp;0&amp;0&amp;am">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率论第一章">
+<meta property="og:url" content="http://example.com/2025/08/31/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%AC%E4%B8%80%E7%AB%A0/index.html">
 <meta property="og:site_name" content="潘小工的小屋">
-<meta property="og:description" content="Per Aspera Ad Astra">
+<meta property="og:description" content="第八周作业first half基础部分A1解：（1）由题，矩阵表示为：$$\begin{bmatrix}1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\0&amp;1&amp;0&amp;1&amp;1&amp;1&amp;0&amp;1\0&amp;0&amp;1&amp;0&amp;1&amp;0&amp;1&amp;1\0&amp;0&amp;0&amp;am">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-31T15:03:37.000Z">
+<meta property="article:modified_time" content="2025-08-31T15:04:43.833Z">
 <meta property="article:author" content="潘小工">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2025/08/31/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%AC%E4%B8%80%E7%AB%A0/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>潘小工的小屋</title>
+  <title>概率论第一章 | 潘小工的小屋</title>
   
 
 
@@ -141,9 +143,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -159,10 +162,9 @@
       <meta itemprop="name" content="潘小工的小屋">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/08/31/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%AC%E4%B8%80%E7%AB%A0/" class="post-title-link" itemprop="url">概率论第一章</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          概率论第一章
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -186,7 +188,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="第八周作业"><a href="#第八周作业" class="headerlink" title="第八周作业"></a>第八周作业</h1><h2 id="first-half"><a href="#first-half" class="headerlink" title="first half"></a>first half</h2><h3 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h3><h4 id="A1"><a href="#A1" class="headerlink" title="A1"></a>A1</h4><p><strong>解</strong>：（1）由题，矩阵表示为：<br>$$<br>\begin{bmatrix}<br>1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\<br>0&amp;1&amp;0&amp;1&amp;1&amp;1&amp;0&amp;1\<br>0&amp;0&amp;1&amp;0&amp;1&amp;0&amp;1&amp;1\<br>0&amp;0&amp;0&amp;1&amp;0&amp;1&amp;0&amp;1\<br>0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;1\<br>0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0\<br>0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0\<br>0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\<br>\end{bmatrix}<br>$$<br>（2）<br>$$<br>记(1)中的矩阵为M，则关系R的对称闭包为M\vee M^T\<br>既包含R又具有对称性的二元关系即以R的对称闭包为基础\<br>矩阵M中主对角线上方共有11处0,选某几处0改为1，再做对称闭包即可\<br>这样便能得到符合题意的矩阵，共C^0_{11}+C^1_{11}+…+C^{11}_{11}&#x3D;2^{11}种\<br>故共有2^{11}个符合题意的二元关系。<br>$$</p>
+        <h1 id="第八周作业"><a href="#第八周作业" class="headerlink" title="第八周作业"></a>第八周作业</h1><h2 id="first-half"><a href="#first-half" class="headerlink" title="first half"></a>first half</h2><h3 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h3><h4 id="A1"><a href="#A1" class="headerlink" title="A1"></a>A1</h4><p><strong>解</strong>：（1）由题，矩阵表示为：<br>$$<br>\begin{bmatrix}<br>1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\<br>0&amp;1&amp;0&amp;1&amp;1&amp;1&amp;0&amp;1\<br>0&amp;0&amp;1&amp;0&amp;1&amp;0&amp;1&amp;1\<br>0&amp;0&amp;0&amp;1&amp;0&amp;1&amp;0&amp;1\<br>0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;1\<br>0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0\<br>0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0\<br>0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\<br>\end{bmatrix}<br>$$<br>（2）<br>$$<br>记(1)中的矩阵为M，则关系R的对称闭包为M\vee M^T\<br>既包含R又具有对称性的二元关系即以R的对称闭包为基础\<br>矩阵M中主对角线上方共有11处0,选某几处0改为1，再做对称闭包即可\<br>这样便能得到符合题意的矩阵，共C^0_{11}+C^1_{11}+…+C^{11}_{11}&#x3D;2^{11}种\<br>故共有2^{11}个符合题意的二元关系。<br>$$</p>
 <h4 id="A2"><a href="#A2" class="headerlink" title="A2"></a>A2</h4><p><strong>解</strong>：<br>$$<br>分为三种情况:\<br>1)两个1均在主对角线上，则该矩阵必然是对称矩阵，舍去\<br>2)两个1只有一个在主对角线上，则有C^1_3C^1_6&#x3D;18个\<br>3)若两个1都不在主对角线上，则有C^2_6-C^1_3&#x3D;12个\<br>综上，共有18+12&#x3D;30个可能的R\<br>$$</p>
 <h3 id="进阶部分"><a href="#进阶部分" class="headerlink" title="进阶部分"></a>进阶部分</h3><h4 id="B1"><a href="#B1" class="headerlink" title="B1"></a>B1</h4><p><strong>解</strong>：<br>$$<br>对于等价关系，考虑关系的矩阵表示中的分块矩阵\<br>对于1\times1的子矩阵，显然只有一个元素并且元素为1即可\<br>对于2\times2的子矩阵，则有两种情况\<br>\begin{bmatrix}<br>1&amp;&amp;0\0&amp;&amp;1<br>\end{bmatrix}或\begin{bmatrix}<br>1&amp;&amp;1\1&amp;&amp;1<br>\end{bmatrix}\<br>对于3\times3的子矩阵，则有五种情况\<br>\begin{bmatrix}1&amp;0&amp;0\0&amp;1&amp;0\0&amp;0&amp;1\end{bmatrix}<br>\begin{bmatrix}1&amp;1&amp;0\1&amp;1&amp;0\0&amp;0&amp;1\end{bmatrix}<br>\begin{bmatrix}1&amp;0&amp;0\0&amp;1&amp;1\0&amp;1&amp;1\end{bmatrix}<br>\begin{bmatrix}1&amp;0&amp;1\0&amp;1&amp;0\1&amp;0&amp;1\end{bmatrix}^{(<em>)}<br>\begin{bmatrix}1&amp;1&amp;1\1&amp;1&amp;1\1&amp;1&amp;1\end{bmatrix}\<br>对于更高阶的矩阵，考虑其子矩阵里出现低阶的等价关系矩阵\<br>对于4\times4的矩阵，我们做如下讨论:\<br>1)不含2\times2及以上的子矩阵:2种(即单位矩阵或类似于矩阵^{(</em>)})\<br>2)只含一个2\times2及以上的非单位子矩阵:3\times(2-1)+2\times(5-1)+1&#x3D;12种\<br>3)只含两个2\times2及以上且不重合的非单位子矩阵:1种\<br>对于5\times5的子矩阵，我们做如下讨论:\<br>1)不含2\times2及以上的子矩阵:2种\<br>2)只含一个2\times2及以上的非单位子矩阵:\4\times(2-1)+3\times(5-1)+2\times(15-1)+1&#x3D;45种\<br>3)只含两个2\times2及以上的非单位子矩阵:3+2\times2&#x3D;7种\<br>4)只含三个2\times2及以上的非单位子矩阵:因为3\times2&gt;5,故不存在\<br>综上共有54种。<br>$$</p>
 <h4 id="B2"><a href="#B2" class="headerlink" title="B2"></a>B2</h4><p><strong>解</strong>：<br>$$<br>显然,A,B,C构成了集合{1,2,…,n}的一个划分\<br>1)若有两个集合是空集，那另外一个集合必然是{1,2,…,n}:C^1_3&#x3D;3个\<br>2)若只有一个集合是空集:C^1_3\times(C^1_n+C^2_n+…+C^{n-1}<em>n)&#x3D;3(2^n-2)个\<br>3)若三个集合都不是空集:\C^1_n(C^1</em>{n-1}+…+C^{n-2}<em>{n-1})+C^2_n(C^1</em>{n-2}+…+C^{n-3}_{n-2})+…+C^{n-2}_n(C^1_2)\<br>&#x3D;C^1_n(2^{n-1}-2)+C^2_n(2^{n-2}-2)+…+C_n^{n-2}(2^2-2)\<br>&#x3D;C^1_n2^{n-1}+C^2_n2^{n-2}+…+C^{n-2}_n2^2-2(C^1_n+C^2_n+…+C_n^{n-2})\<br>&#x3D;(2+1)^n-C^0_n2^n-C^{n-1}_n2^1-C^n_n2^0-2(2^n-2-n)\<br>&#x3D;3^n-3\cdot2^n+3\<br>综上，共有3+3(2^n-2)+3^n-3\cdot2^n+3&#x3D;3^n个<br>$$</p>
@@ -201,91 +203,30 @@
 <p>若这五人皆不认识A，而另外一方的四人认识A，分两种情况：1）四人中至少存在一对人相互认识，此时再加上A，就有三个相互认识的人，符合题意。2）四人中两两都不认识，也符合题意。</p>
 <p>综上，命题成立。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/31/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="潘小工">
-      <meta itemprop="description" content="Per Aspera Ad Astra">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="潘小工的小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/08/31/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-08-31 21:14:02" itemprop="dateCreated datePublished" datetime="2025-08-31T21:14:02+08:00">2025-08-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/08/31/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -338,6 +279,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E5%91%A8%E4%BD%9C%E4%B8%9A"><span class="nav-number">1.</span> <span class="nav-text">第八周作业</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#first-half"><span class="nav-number">1.1.</span> <span class="nav-text">first half</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86"><span class="nav-number">1.1.1.</span> <span class="nav-text">基础部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A1"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">A1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A2"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">A2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E9%83%A8%E5%88%86"><span class="nav-number">1.1.2.</span> <span class="nav-text">进阶部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#B1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">B1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B2"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">B2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#second-half"><span class="nav-number">1.2.</span> <span class="nav-text">second half</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">基础部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A3"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">A3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A4"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">A4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E9%83%A8%E5%88%86-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">进阶部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#B3"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">B3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B4"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">B4</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
