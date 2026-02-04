@@ -1,10 +1,14 @@
 
-html{
+html, body {
 	height: 100%;
 	margin: 0;
-	padding: 0;
-	font-family: microsoft yahei,helvetica,simhei,simsun,sans-serif;
 }
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
 
 
 
@@ -197,11 +201,13 @@ a {
 	-o-transition: 0.5s;
 }
 /* index */
-.content{
+.content {
+	flex: 1;
 	max-width: 850px;
 	margin: 50px auto 0;
-	padding-bottom: 60px; /* >= footer 高度 */
+	padding-bottom: 60px; /* 给 footer 让位 */
 }
+
 
 
 .index-li {
