@@ -21,25 +21,18 @@ a {
     text-decoration: none;
 }
 /* sidebar 打开时：主内容区域让位 + 缩窄（避免横向滚动） */
-.content-on{
-  padding: 14px;
-  margin-left: 250px;
-  width: calc(100% - 250px);
-}
-
-.content-off{
+.content-on, .content-off{
   padding: 14px;
   margin-left: 0;
-  width: 100%;
+  width: auto;
 }
+
 
 /* sidebar 打开时：header 让位 + 缩窄（关键修复点） */
 .header-on{ padding-left: 0 !important; }
 
-#header.header-on{
-  left: 250px;
-  width: calc(100% - 250px);
-}
+#header.header-on{ left:250px; width:calc(100% - 250px); }
+
 
 .on,
 .header-on,
@@ -232,15 +225,6 @@ a {
   box-sizing: border-box;
 }
 
-/* sidebar 打开时：缩窄并右移（避免横向滚动） */
-.content-on .content,
-.on .content,
-#sidebar.on ~ .content {
-  width: calc(100% - 250px);
-  margin-left: 250px;
-  margin-right: 0;
-  max-width: none;          /* 关键：否则 max-width 会和 calc 冲突 */
-}
 
 
 .index-li {
@@ -434,6 +418,33 @@ figure{
 	-webkit-justify-content: flex-end;
 	justify-content: flex-end;
 }
+/* =========================
+   Layout shift when sidebar open
+   ========================= */
+
+/* header：侧边栏打开时缩窄并右移 */
+#sidebar.on ~ #header{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* 主内容：侧边栏打开时缩窄并右移
+   注意：不只匹配 .content，还匹配外层容器（避免首页结构差异） */
+#sidebar.on ~ .content,
+#sidebar.on ~ .content-on,
+#sidebar.on ~ .content-off{
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* 如果 .content 还在里面，确保它撑满缩窄后的宽度 */
+#sidebar.on ~ .content .content,
+#sidebar.on ~ .content-on .content,
+#sidebar.on ~ .content-off .content{
+  max-width: none;
+  width: 100%;
+}
+
 /* footer */
 #footer{
 	position: fixed; 
