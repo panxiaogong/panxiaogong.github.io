@@ -1,7 +1,11 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 html, body {
 	height: 100%;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 body {
@@ -17,7 +21,7 @@ a {
     text-decoration: none;
 }
 .content-on{
-	padding: 14px 14px 14px 250px
+	padding: 14px;
 }
 .content-off{
  	padding: 14px;
@@ -208,6 +212,23 @@ a {
 	padding-bottom: 60px; /* 给 footer 让位 */
 }
 
+/* 默认：sidebar 关闭 */
+.content {
+  max-width: 850px;
+  margin: 50px auto 0;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+/* sidebar 打开时：缩窄并右移（避免横向滚动） */
+.content-on .content,
+.on .content,
+#sidebar.on ~ .content {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  margin-right: 0;
+  max-width: none;          /* 关键：否则 max-width 会和 calc 冲突 */
+}
 
 
 .index-li {
