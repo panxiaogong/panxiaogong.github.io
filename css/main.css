@@ -403,24 +403,24 @@ figure{
 	font-size: 14px;
 	background-color: #000;
 	color: #ccc;
-	height: 36px;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	padding: 6px 0;      /* 控制“真实厚度”的关键 */
+	position: relative;
 	width: 100%;
+
+	padding: 10px 0;
 	box-sizing: border-box;
 }
-#footer p {
+#footer p{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	margin: 0;
-	padding: 0;
-	line-height: 1.4;
+	white-space: nowrap;
 }
-#footer a {
+#footer a{
 	color: #fff;
 }
+
 
 /* @media */
 @media screen and (max-width: 850px) {
