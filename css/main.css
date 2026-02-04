@@ -6,10 +6,6 @@ html, body {
 	font-family: microsoft yahei,helvetica,simhei,simsun,sans-serif;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-}
 
 
 a {
@@ -400,31 +396,34 @@ figure{
 	justify-content: flex-end;
 }
 /* footer */
+/* footer */
 #footer{
-	height: 40px;              /* 控制黑条厚度 */
+	position: relative;      /* 不参与 flex 拉伸 */
+	height: 36px;            /* 明确高度，防止变形 */
 	background-color: #000;
 	color: #ccc;
 
-	display: flex;             /* 核心 */
-	align-items: center;       /* 垂直居中 */
-	justify-content: center;   /* 水平居中 */
+	display: flex;
+	align-items: center;     /* 垂直居中 */
+	justify-content: center; /* 水平居中 */
 
 	font-size: 14px;
-	line-height: 1;            /* 防止被 p 行高拉偏 */
+	line-height: 1;
 	box-sizing: border-box;
 }
 
-/* 清除 p 标签默认干扰 */
+/* p 标签不要干扰高度 */
 #footer p {
 	margin: 0;
 	padding: 0;
 }
 
-/* 不论 on / off，都保持一致 */
+/* on / off 状态下都固定高度 */
 #footer.on,
 #footer.off {
-	height: 40px;
+	height: 36px;
 }
+
 
 
 
