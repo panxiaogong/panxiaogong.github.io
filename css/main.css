@@ -401,16 +401,18 @@ figure{
 /* footer */
 #footer{
 	font-size: 14px;
-	height: 50px;
-	background-color: #60281e;
-	color: #dfb7b7;
+	background-color: #000;
+	color: #ccc;
+	padding: 6px 0;
 	text-align: center;
 }
 #footer a {
     color: #fff;
 }
 #footer p {
-    padding: 5px;
+	margin: 0;
+    padding: 0;
+	line-height: 1.4;
 }
 /* @media */
 @media screen and (max-width: 850px) {
