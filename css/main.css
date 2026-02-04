@@ -1,13 +1,16 @@
 
-* {
+html, body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
-	border: 0;
-}
-
-html{
 	font-family: microsoft yahei,helvetica,simhei,simsun,sans-serif;
 }
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
 
 a {
     color: #069;
@@ -200,13 +203,10 @@ a {
 /* index */
 .content{
 	max-width: 850px;
-	min-height: calc(100vh - 130px);
-	top: 50px;
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: 0;
-	margin: 50px auto auto auto;
+	flex: 1;                 /* 关键：自动撑满剩余高度 */
+	margin: 50px auto 0;     /* 顶部给 header 留空间，底部不留 */
 }
+
 .index-li {
 	margin: 20px 0 0 0;
 	border-bottom: 1px solid #c6c6c6;
