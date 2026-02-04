@@ -205,6 +205,7 @@ a {
 	max-width: 850px;
 	flex: 1;                 /* 关键：自动撑满剩余高度 */
 	margin: 50px auto 0;     /* 顶部给 header 留空间，底部不留 */
+	padding-bottom: 50px;
 }
 
 .index-li {
@@ -400,26 +401,30 @@ figure{
 }
 /* footer */
 #footer{
-	font-size: 14px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+
+	width: 100vw;
+	height: 36px;
+
 	background-color: #000;
 	color: #ccc;
 
-	position: relative;
-	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-	padding: 10px 0;
-	box-sizing: border-box;
+	z-index: 999;
 }
 #footer p{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 	margin: 0;
-	white-space: nowrap;
+	font-size: 13px;
 }
 #footer a{
 	color: #fff;
 }
+
 
 
 /* @media */
