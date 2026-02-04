@@ -409,13 +409,14 @@ figure{
 	align-items: center;
 	justify-content: center;
 
+	padding: 6px 0;      /* 控制“真实厚度”的关键 */
 	width: 100%;
 	box-sizing: border-box;
 }
 #footer p {
 	margin: 0;
 	padding: 0;
-	line-height: 1;
+	line-height: 1.4;
 }
 #footer a {
 	color: #fff;
