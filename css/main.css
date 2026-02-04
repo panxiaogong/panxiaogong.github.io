@@ -401,29 +401,31 @@ figure{
 }
 /* footer */
 #footer{
-	position: fixed;
-	left: 0;
-	bottom: 0;
-
-	width: 100vw;
-	height: 36px;
-
+	height: 40px;              /* 控制黑条厚度 */
 	background-color: #000;
 	color: #ccc;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: flex;             /* 核心 */
+	align-items: center;       /* 垂直居中 */
+	justify-content: center;   /* 水平居中 */
 
-	z-index: 999;
+	font-size: 14px;
+	line-height: 1;            /* 防止被 p 行高拉偏 */
+	box-sizing: border-box;
 }
-#footer p{
+
+/* 清除 p 标签默认干扰 */
+#footer p {
 	margin: 0;
-	font-size: 13px;
+	padding: 0;
 }
-#footer a{
-	color: #fff;
+
+/* 不论 on / off，都保持一致 */
+#footer.on,
+#footer.off {
+	height: 40px;
 }
+
 
 
 
