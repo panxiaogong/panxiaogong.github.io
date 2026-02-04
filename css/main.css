@@ -1,6 +1,6 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
 
 html, body {
 	height: 100%;
@@ -20,15 +20,27 @@ a {
     color: #069;
     text-decoration: none;
 }
+/* sidebar 打开时：主内容区域让位 + 缩窄（避免横向滚动） */
 .content-on{
-	padding: 14px;
+  padding: 14px;
+  margin-left: 250px;
+  width: calc(100% - 250px);
 }
+
 .content-off{
- 	padding: 14px;
+  padding: 14px;
+  margin-left: 0;
+  width: 100%;
 }
-.header-on{
-	padding-left: 250px;
+
+/* sidebar 打开时：header 让位 + 缩窄（关键修复点） */
+.header-on{ padding-left: 0 !important; }
+
+#header.header-on{
+  left: 250px;
+  width: calc(100% - 250px);
 }
+
 .on,
 .header-on,
 .content-on,
