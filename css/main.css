@@ -22,8 +22,12 @@ a {
 .header-on{
 	padding-left: 250px;
 }
+.footer-on{
+	padding-left: 250px;
+}
 .on,
 .header-on,
+.footer-on,
 .content-on,
 .content-off,
 .off{
