@@ -133,7 +133,7 @@ a {
 }
 #sidebar.on {
   left: 0;
-  border-right: 1px dashed var(--border);
+  border-right: 2px dashed var(--accent);
 }
 #sidebar.off {
   left: -250px;
