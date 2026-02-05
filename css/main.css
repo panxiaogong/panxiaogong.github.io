@@ -9,20 +9,19 @@ html{
 	font-family: microsoft yahei,helvetica,simhei,simsun,sans-serif;
 }
 :root{
-	--bg: #f3f0ea;
-	--text: #3b2f2a;
-	--muted: #8b7f76;
-	--accent: #3b1f16;
-	--accent-soft: #6f4b3b;
-	--panel: #e9e4dd;
-	--sidebar: #3b3330;
-	--sidebar-text: #c9c0b7;
-	--link: #5b3d2e;
-	--link-hover: #2f1b15;
-	--border: #d9d2c8;
-	--code-bg: #ece7e0;
-	--pill: #d6cec4;
-	--toggle-bg: rgba(59,31,22,0.6);
+	--bg: #f3f2ee;
+	--text: #202020;
+	--muted: #6f6f6f;
+	--accent: #202020;
+	--panel: #f3f2ee;
+	--sidebar: #f3f2ee;
+	--sidebar-text: #202020;
+	--link: #202020;
+	--link-hover: #000;
+	--border: #d9d6cf;
+	--code-bg: #ebe9e3;
+	--pill: #e6e3db;
+	--toggle-bg: rgba(32,32,32,0.6);
 }
 body{
 	min-height: 100vh;
@@ -74,7 +73,7 @@ a {
 }
 #title {
 	font-size: 20px;
-	color: #f5efe8;
+	color: #f3f2ee;
 	padding: 10px 15px;
 }
 #menu {
@@ -89,7 +88,7 @@ a {
 }
 #menu .menu-item-link{
 	font-size: 12px;
-	color: #f5efe8;
+	color: #f3f2ee;
 }
 #menu .menu-item-link:hover {
 	border-bottom: 1px solid;
@@ -160,15 +159,15 @@ a {
 }
 .sidebar-toc:hover {
 	cursor: pointer;
-	color: #f1e7dc;
+	color: #202020;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-o-user-select: none;
 }
 .toc-active{
-	color: #f1e7dc;
-	border-bottom: 1px solid #f1e7dc;
+	color: #202020;
+	border-bottom: 1px solid #202020;
 }
 #site-toc {
 	height: calc( 100% - 5px );
@@ -195,12 +194,12 @@ a {
 }
 
 #sidebar ul li a:hover{
-	color: #f1e7dc;
-	border-bottom: 1px solid #f1e7dc;
+	color: #202020;
+	border-bottom: 1px solid #202020;
 }
 #sidebar .active a{
-	color: #f1e7dc;
-	border-bottom: 1px solid #f1e7dc;
+	color: #202020;
+	border-bottom: 1px solid #202020;
 }
 .article-toc ul li i {
 	color: var(--sidebar-text);
@@ -220,7 +219,7 @@ a {
 	margin-left: 60px;
 }
 #sidebar .article-toc a.read{
-	color: #f1e7dc;
+	color: #202020;
 	border-bottom: 0;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -433,8 +432,8 @@ figure{
 	font-size: 14px;
 	height: auto;
 	line-height: 1.4;
-	background-color: var(--accent);
-	color: #f1e7dc;
+	background-color: #202020;
+	color: #f3f2ee;
 	text-align: center;
 	flex-shrink: 0;
 	clear: both;
@@ -449,7 +448,7 @@ figure{
 	width: 100%;
 }
 #footer a {
-    color: #f7efe7;
+    color: #f3f2ee;
 }
 #footer p {
     padding: 0;
