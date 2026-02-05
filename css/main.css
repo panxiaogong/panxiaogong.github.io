@@ -13,7 +13,7 @@ a {
     color: #069;
     text-decoration: none;
 }
-.content-on{  /*侧边栏打开*/
+.content-on{
 	padding: 14px 14px 14px 250px
 }
 .content-off{
@@ -22,12 +22,8 @@ a {
 .header-on{
 	padding-left: 250px;
 }
-.footer-on{
-	padding-left: 250px;
-}
 .on,
 .header-on,
-.footer-on,
 .content-on,
 .content-off,
 .off{
@@ -404,10 +400,6 @@ figure{
 }
 /* footer */
 #footer{
-	position:fixed;
-	bottom: 0px;
-	left:0;
-	width: 100%;
 	font-size: 14px;
 	height: 50px;
 	background-color: #60281e;
