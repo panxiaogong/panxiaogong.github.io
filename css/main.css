@@ -133,6 +133,7 @@ a {
 }
 #sidebar.on {
   left: 0;
+  border-right: 1px dashed var(--border);
 }
 #sidebar.off {
   left: -250px;
