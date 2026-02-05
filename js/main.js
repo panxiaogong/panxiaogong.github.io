@@ -14,6 +14,7 @@ $(document).ready(function () {
 function pageScroll() {
   var start_hight = 0;
   $(window).on('scroll', function () {
+    return;
     var end_hight = $(window).scrollTop();
     var distance = end_hight - start_hight;
     start_hight = end_hight;
