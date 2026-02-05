@@ -306,7 +306,7 @@ function scrollOn() {
     $content.removeClass('content-off');
     $header.addClass('header-on');
     $header.removeClass('off');
-    $footer.addClass('header-on');
+    $footer.addClass('footer-on');
     $footer.removeClass('off');
   }
 }
@@ -328,7 +328,7 @@ function scrollOff() {
   $header.addClass('off');
   $header.removeClass('header-on');
   $footer.addClass('off');
-  $footer.removeClass('header-on');
+  $footer.removeClass('footer-on');
 }
 
 /**
