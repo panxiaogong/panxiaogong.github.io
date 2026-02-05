@@ -205,11 +205,9 @@ a {
 /* index */
 .content{
 	max-width: 850px;
-	min-height: calc(100vh - 130px);
+	min-height: 0;
 	top: 50px;
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: 0;
+	flex: 1 0 auto;
 	margin: 50px auto auto auto;
 }
 .index-li {
@@ -412,6 +410,8 @@ figure{
 	background-color: #60281e;
 	color: #dfb7b7;
 	text-align: center;
+	flex-shrink: 0;
+	clear: both;
 }
 #footer a {
     color: #fff;
