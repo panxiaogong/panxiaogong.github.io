@@ -407,13 +407,17 @@ figure{
 	height: 50px;
 	background-color: #60281e;
 	color: #dfb7b7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 }
 #footer a {
     color: #fff;
 }
 #footer p {
-    padding: 5px;
+	margin: 0;
+	padding: 5px;
 }
 /* @media */
 @media screen and (max-width: 850px) {
