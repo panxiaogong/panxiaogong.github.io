@@ -207,11 +207,21 @@ a {
 /* index */
 .content{
     max-width: 850px;
-    flex: 1;                 /* 关键：占满剩余高度，把 footer 推到底 */
-    margin: 0 auto;          /* 去掉 margin-top:50px，避免再额外“加高度” */
-    padding-top: 50px;       /* 给固定 header 留出空间 */
-    padding-bottom: 14px;    /* 可选：底部留一点空 */
+
+    /* 关键：把 content 变成能撑满视口高度的容器 */
+    min-height: calc(100vh - 50px);  /* 50px 是 #header 的固定高度 */
+
+    /* 关键：让 footer 能用 margin-top:auto 被推到底 */
+    display: flex;
+    flex-direction: column;
+
+    /* 不要再用 margin-top 抬高内容（那会额外增加总高度） */
+    margin: 0 auto;
+
+    /* header 是 fixed，不占文档流，用 padding-top 给内容让位 */
+    padding-top: 50px;
 }
+
 
 .index-li {
 	margin: 20px 0 0 0;
@@ -411,13 +421,16 @@ figure{
 	background-color: #000;
 	color: #ccc;
 	text-align: center;
-	margin-top: auto;
+	margin-top: auto;   /* 关键：把 footer 推到 content 底部 */
+    /* 建议别固定 height，否则 padding/字体稍一变就溢出 */
+    height: auto;
+    padding: 5px 0;
 }
 #footer a {
     color: #fff;
 }
 #footer p {
-    padding: 5px;
+    padding: 0;
 }
 /* @media */
 @media screen and (max-width: 850px) {
