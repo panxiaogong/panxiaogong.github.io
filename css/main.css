@@ -107,6 +107,12 @@ a {
 #sidebar.off {
   left: -250px;
 }
+/* When sidebar is visible, shift footer to align with content area */
+#sidebar.on ~ #footer,
+.on #footer {
+	left: 250px;
+	width: calc(100% - 250px);
+}
 #search-input {
 	position: absolute;
 	width: 230px;
