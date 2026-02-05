@@ -400,11 +400,15 @@ figure{
 }
 /* footer */
 #footer{
+	position: absolute;
+    bottom: 0;
+    width: 100%;
 	font-size: 14px;
-	height: 25px;
+	height: 30px;
 	background-color: #000;
 	color: #ccc;
 	text-align: center;
+	margin-top: -50px;
 }
 #footer a {
     color: #fff;
