@@ -9,19 +9,19 @@ html{
 	font-family: microsoft yahei,helvetica,simhei,simsun,sans-serif;
 }
 :root{
-	--bg: #1c1c1c;
-	--text: #e6e2dd;
-	--muted: #a59d95;
-	--accent: #151515;
-	--panel: #1f1f1f;
-	--sidebar: #1a1a1a;
-	--sidebar-text: #d2cbc3;
-	--link: #d9c7b0;
-	--link-hover: #f2dfc8;
-	--border: #2b2b2b;
-	--code-bg: #262626;
-	--pill: #2a2a2a;
-	--toggle-bg: rgba(21,21,21,0.7);
+	--bg: #f3f2ee;
+	--text: #2b2b2b;
+	--muted: #7a746c;
+	--accent: #202020;
+	--panel: #f3f2ee;
+	--sidebar: #f3f2ee;
+	--sidebar-text: #2b2b2b;
+	--link: #2b2b2b;
+	--link-hover: #000;
+	--border: #d7d2cb;
+	--code-bg: #ebe8e2;
+	--pill: #e6e2db;
+	--toggle-bg: rgba(32,32,32,0.7);
 	--header-height: 50px;
 	--footer-height: 36px;
 }
