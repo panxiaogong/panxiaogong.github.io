@@ -22,6 +22,8 @@ html{
 	--code-bg: #ebe9e3;
 	--pill: #e6e3db;
 	--toggle-bg: rgba(32,32,32,0.6);
+	--header-height: 50px;
+	--footer-height: 36px;
 }
 body{
 	min-height: 100vh;
@@ -29,11 +31,8 @@ body{
 	flex-direction: column;
 	background-color: var(--bg);
 	color: var(--text);
-}
-body{
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+	padding-top: var(--header-height);
+	padding-bottom: var(--footer-height);
 }
 
 a {
@@ -47,7 +46,7 @@ a {
  	padding: 14px;
 }
 .header-on{
-	padding-left: 250px;
+	padding-left: 0;
 }
 .on,
 .header-on,
@@ -60,10 +59,12 @@ a {
 }
 /* header */
 #header {
-	position:fixed;
-	top: 0px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	width: 100%;
-	height: 50px;
+	height: var(--header-height);
 	background: var(--accent);
 	z-index: 98;
     display: flex;
@@ -125,8 +126,8 @@ a {
 	flex-basis: 0;
 	width: 250px;
 	left: -250px;
-	height: 100%;
-	top: 0px;
+	top: var(--header-height);
+	bottom: var(--footer-height);
 	background: var(--sidebar);
 	z-index: 99;
 }
@@ -230,9 +231,8 @@ a {
 .content{
 	max-width: 850px;
 	min-height: 0;
-	top: 50px;
 	flex: 1 0 auto;
-	margin: 50px auto auto auto;
+	margin: 0 auto auto auto;
 }
 .index-li {
 	margin: 20px 0 0 0;
@@ -430,18 +430,24 @@ figure{
 	margin-top: auto;
 	width:100%;
 	font-size: 14px;
-	height: auto;
-	line-height: 1.4;
+	height: var(--footer-height);
 	background-color: #202020;
 	color: #f3f2ee;
 	text-align: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-shrink: 0;
 	clear: both;
-	padding: 8px 0;
+	padding: 0;
 }
 #footer.footer-on{
-	margin-left: 250px;
-	width: calc(100% - 250px);
+	margin-left: 0;
+	width: 100%;
 }
 #footer.footer-off{
 	margin-left: 0;
