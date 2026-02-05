@@ -1,14 +1,21 @@
 
 * {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
-
+html, body {
+    height: 100%;
+}
 html{
 	font-family: microsoft yahei,helvetica,simhei,simsun,sans-serif;
 }
-
+#container {
+    min-height: 100%;
+    display: flex; /* 容器为flex布局 */
+    flex-direction: column; /* 方向为纵向，保持正常的从上到下文档流 */
+}
 a {
     color: #069;
     text-decoration: none;
@@ -400,15 +407,12 @@ figure{
 }
 /* footer */
 #footer{
-	position: absolute;
-    bottom: 0;
-    width: 100%;
 	font-size: 14px;
 	height: 30px;
 	background-color: #000;
 	color: #ccc;
 	text-align: center;
-	margin-top: -50px;
+	margin-top: auto;
 }
 #footer a {
     color: #fff;
