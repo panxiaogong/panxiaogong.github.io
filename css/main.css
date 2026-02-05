@@ -31,6 +31,8 @@ a {
 .header-on,
 .content-on,
 .content-off,
+.footer-on,
+.footer-off,
 .off{
 	transition: all 0.5s;
 }
