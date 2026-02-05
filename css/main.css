@@ -235,6 +235,9 @@ a {
 	flex: 1 0 auto;
 	margin: 0 auto auto auto;
 }
+.dir-post .content{
+	max-width: 1050px;
+}
 .index-li {
 	margin: 20px 0 0 0;
 	border-bottom: 1px solid var(--border);
