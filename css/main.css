@@ -110,7 +110,7 @@ a {
 /* When sidebar is visible, shift footer to align with content area */
 #sidebar.on ~ #footer,
 .on #footer {
-	right: 250px;
+	left: 250px;
 	width: calc(100% - 250px);
 }
 #search-input {
