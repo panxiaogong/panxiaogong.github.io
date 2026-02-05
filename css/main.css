@@ -16,12 +16,6 @@ html{
     display: flex; /* 容器为flex布局 */
     flex-direction: column; /* 方向为纵向，保持正常的从上到下文档流 */
 }
-header, footer {
-    padding: 20px;
-}
-main {
-    padding: 20px;
-}
 a {
     color: #069;
     text-decoration: none;
@@ -418,7 +412,6 @@ figure{
 	background-color: #000;
 	color: #ccc;
 	text-align: center;
-	margin-top: auto;
 }
 #footer a {
     color: #fff;
