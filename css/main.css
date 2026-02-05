@@ -408,12 +408,14 @@ figure{
 	margin-top: auto;
 	width:100%;
 	font-size: 14px;
-	height: 50px;
+	height: auto;
+	line-height: 1.4;
 	background-color: #000;
 	color: #ccc;
 	text-align: center;
 	flex-shrink: 0;
 	clear: both;
+	padding: 8px 0;
 }
 #footer.footer-on{
 	margin-left: 250px;
@@ -427,7 +429,7 @@ figure{
     color: #fff;
 }
 #footer p {
-    padding: 5px;
+    padding: 0;
 }
 /* @media */
 @media screen and (max-width: 850px) {
