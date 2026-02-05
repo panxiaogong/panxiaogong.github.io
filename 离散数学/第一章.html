@@ -22,15 +22,17 @@
 
 	<!-- favicon -->
 	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
 
 
 	<!-- search -->
 	<script>
-		var searchEngine = "";
+		var searchEngine = "https://www.google.com/search?q=";
 		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
 			searchEngine = "https://www.google.com/search?q=";
 		}
-		var homeHost = "";
+		var homeHost = "wujun234.com";
 		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
 			homeHost = window.location.host;
 		}
@@ -67,6 +69,13 @@
 
 
 	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
 	
 
 <meta name="generator" content="Hexo 8.1.1"></head>
@@ -83,7 +92,28 @@
     
 
     
+      
+      
+        <li class="menu-item">
+          <a href='https://github.com/wujun234/hexo-theme-tree' class="menu-item-link" target="_blank">
+            Tree
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a href='https://github.com/wujun234/uid-generator-spring-boot-starter' class="menu-item-link" target="_blank">
+            UidGenerator
+          </a>
+        </li>
+      
+    
   
+    
+      <li class="menu-item">
+        <a href='https://github.com/wujun234' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
     
 	</ul>
 </header>
@@ -102,7 +132,7 @@
 								<li class="file">
 									<a href="/2026/02/04/hello-world/">
                      
-										    hello-world
+										    Hello World
                      
 									</a>
 								</li>
@@ -156,7 +186,7 @@
 	</div>
 	<div id="footer">
 	<p>
-	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+	©<span id="footerYear-start">2025</span>-<span id="footerYear-end"></span>
 
 	
         <a href='/' target="_blank">潘小工</a>
@@ -169,10 +199,6 @@
 	</p>
 </div>
 
-
-<script type="text/javascript">
-	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
-</script>
 
 <script type="text/javascript">
 	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
