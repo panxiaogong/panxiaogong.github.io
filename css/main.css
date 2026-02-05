@@ -237,7 +237,9 @@ a {
 }
 .dir-post .content,
 .dir-page .content{
-	max-width: 1100px;
+	max-width: none;
+	width: calc(100% - 60px);
+	margin: 0 30px auto 30px;
 }
 .index-li {
 	margin: 20px 0 0 0;
