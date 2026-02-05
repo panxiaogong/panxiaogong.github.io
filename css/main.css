@@ -425,6 +425,16 @@ figure{
 	margin: 0;
 	padding: 5px;
 }
+
+/* Align footer content with main content area */
+#footer .footer-inner{
+	max-width: 850px; /* same as .content max-width */
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 14px; /* match content side padding */
+	margin: 0 auto;
+	text-align: center;
+}
 /* @media */
 @media screen and (max-width: 850px) {
 
