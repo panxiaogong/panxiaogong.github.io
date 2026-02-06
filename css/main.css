@@ -33,6 +33,7 @@ body{
 	color: var(--text);
 	padding-top: var(--header-height);
 	padding-bottom: var(--footer-height);
+	overflow-x: hidden;
 }
 
 a {
@@ -234,12 +235,15 @@ a {
 	min-height: 0;
 	flex: 1 0 auto;
 	margin: 0 auto auto auto;
+	box-sizing: border-box;
 }
 .dir-post .content,
 .dir-page .content{
 	max-width: none;
-	width: calc(100% - 60px);
-	margin: 0 30px auto 30px;
+	width: 100%;
+	margin: 0 auto auto auto;
+	padding: 0 30px;
+	box-sizing: border-box;
 }
 .index-li {
 	margin: 20px 0 0 0;
