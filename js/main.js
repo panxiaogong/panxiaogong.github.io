@@ -134,6 +134,10 @@ function showArticleIndex() {
 
   $(".article-toc.active-toc").append(content);
 
+  // 标记当前文件为展开状态
+  $("#tree li.file").removeClass("toc-open");
+  $("#tree .active").addClass("toc-open");
+
   $(".article-toc.active-toc li").each(function () {
     var $li = $(this);
     var $child = $li.children("ul");
@@ -330,12 +334,14 @@ function clickTreeDirectory() {
   // 当前文件：点击文件名展开/收起目录
   $(document).on("click", "#tree a[data-toc='toggle']", function (e) {
     e.preventDefault();
-    var toc = $(this).closest("li.file").next(".article-toc");
+    var $file = $(this).closest("li.file");
+    var toc = $file.next(".article-toc");
     if (toc.length) {
       if (toc.is(":empty")) {
         showArticleIndex();
       }
       toc.toggle();
+      $file.toggleClass("toc-open", toc.is(":visible"));
     }
   });
 }
