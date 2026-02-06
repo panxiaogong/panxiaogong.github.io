@@ -227,13 +227,13 @@ a {
 	margin-left: 0px;
 }
 .article-toc .level_2 {
-	margin-left: 6px;
+	margin-left: 10px;
 }
 .article-toc .level_3 {
-	margin-left: 12px;
+	margin-left: 20px;
 }
 .article-toc .level_4 {
-	margin-left: 18px;
+	margin-left: 30px;
 }
 #sidebar .article-toc a.read{
 	color: #202020;
