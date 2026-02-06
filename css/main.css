@@ -26,6 +26,23 @@ html{
 	--footer-height: 36px;
 	--sidebar-width: 250px;
 }
+/* Slightly heavier Latin letters in KaTeX, keep Greek normal */
+@font-face{
+	font-family: "KaTeX_Main";
+	font-style: italic;
+	font-weight: 450;
+	src: url("https://cdn.staticfile.org/KaTeX/0.16.9/fonts/KaTeX_Main-Italic.woff2") format("woff2"),
+		 url("https://cdn.staticfile.org/KaTeX/0.16.9/fonts/KaTeX_Main-Italic.woff") format("woff");
+	unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face{
+	font-family: "KaTeX_Math";
+	font-style: italic;
+	font-weight: 400;
+	src: url("https://cdn.staticfile.org/KaTeX/0.16.9/fonts/KaTeX_Main-Italic.woff2") format("woff2"),
+		 url("https://cdn.staticfile.org/KaTeX/0.16.9/fonts/KaTeX_Main-Italic.woff") format("woff");
+	unicode-range: U+0370-03FF, U+1F00-1FFF;
+}
 body{
 	min-height: 100vh;
 	display: flex;
@@ -39,7 +56,7 @@ body{
 
 #article-title,
 #article-content{
-	font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+	font-family: "KaTeX_Main", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
 	color: #000;
 }
 
@@ -510,6 +527,31 @@ body.sidebar-resizing #search-input{
 #article-content p {
 	line-height: 1.8;
 	margin-bottom: 12px;
+}
+#article-content .katex {
+	font-size: 1.08em;
+	line-height: 1.2;
+}
+#article-content .katex .vlist {
+	line-height: 1;
+}
+#article-content .katex-display {
+	margin: 0.6em 0;
+	font-size: 1.12em;
+}
+#article-content .katex .mathit {
+	font-weight: 450;
+}
+#article-content .katex .mathnormal {
+	font-weight: 400;
+}
+#article-content .katex .mbin,
+#article-content .katex .mrel,
+#article-content .katex .mop,
+#article-content .katex .mopen,
+#article-content .katex .mclose,
+#article-content .katex .mathrm {
+	font-weight: 500;
 }
 #article-content ul code,
 #article-content ol code,
