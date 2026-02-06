@@ -71,7 +71,7 @@ function showArticleIndex() {
   $("#tree .active").next().addClass('active-toc');
 
   var labelList = $("#article-content").children();
-  var content = "<ul>";
+  var content = "";
   var max_level = 4;
   for (var i = 0; i < labelList.length; i++) {
     var level = 5;
@@ -88,6 +88,7 @@ function showArticleIndex() {
       max_level = level;
     }
   }
+  var headings = [];
   for (var i = 0; i < labelList.length; i++) {
     var level = 0;
     if ($(labelList[i]).is("h1")) {
@@ -102,14 +103,47 @@ function showArticleIndex() {
     if (level != 0) {
       $(labelList[i]).before(
           '<span class="anchor" id="_label' + i + '"></span>');
-      content += '<li class="level_' + level
-          + '"><i class="fa fa-circle" aria-hidden="true"></i><a href="#_label'
-          + i + '"> ' + $(labelList[i]).text() + '</a></li>';
+      headings.push({ level: level, text: $(labelList[i]).text(), id: i });
     }
   }
-  content += "</ul>"
+
+  var currentLevel = 0;
+  content += "<ul class=\"toc-root\">";
+  headings.forEach(function(h, idx){
+    while (currentLevel < h.level) {
+      content += "<ul>";
+      currentLevel++;
+    }
+    while (currentLevel > h.level) {
+      content += "</li></ul>";
+      currentLevel--;
+    }
+    if (idx !== 0) {
+      content += "</li>";
+    }
+    content += "<li class=\"toc-item level_" + h.level + "\">"
+      + "<a class=\"toc-link\" href=\"#_label" + h.id + "\">"
+      + h.text + "</a>";
+  });
+  while (currentLevel > 0) {
+    content += "</li></ul>";
+    currentLevel--;
+  }
+  content += "</li></ul>";
 
   $(".article-toc.active-toc").append(content);
+
+  $(".article-toc.active-toc li").each(function () {
+    var $li = $(this);
+    var $child = $li.children("ul");
+    if ($child.length) {
+      $li.addClass("toc-collapsed");
+      $child.hide();
+      if ($li.children(".toc-toggle").length === 0) {
+        $li.prepend('<span class="toc-toggle">+</span>');
+      }
+    }
+  });
 
   if (null != $(".article-toc a") && 0 != $(".article-toc a").length) {
 
@@ -122,6 +156,18 @@ function showArticleIndex() {
           {'scrollTop': target.offset().top},
           500
       );
+    });
+
+    $(document).on("click", ".article-toc .toc-toggle", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var $li = $(this).parent();
+      var $child = $li.children("ul");
+      if ($child.length) {
+        $child.toggle();
+        $li.toggleClass("toc-collapsed");
+        $(this).text($li.hasClass("toc-collapsed") ? "+" : "-");
+      }
     });
 
     // 监听浏览器滚动条，当浏览过的标签，给他上色。
@@ -281,6 +327,18 @@ function clickTreeDirectory() {
         subTree.slideDown({duration: 100});
       }
       icon.addClass("fa-minus-square-o");
+    }
+  });
+
+  // 当前文件：点击文件名展开/收起目录
+  $(document).on("click", "#tree a[data-toc='toggle']", function (e) {
+    e.preventDefault();
+    var toc = $(this).closest("li.file").next(".article-toc");
+    if (toc.length) {
+      if (toc.is(":empty")) {
+        showArticleIndex();
+      }
+      toc.toggle();
     }
   });
 }

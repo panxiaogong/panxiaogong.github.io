@@ -192,7 +192,7 @@ a {
 	overflow: auto;
 	margin-top: 50px;
 }
-#tree ul ul {
+#tree .directory > ul {
 	display: none;
 }
 #tree li.directory.active > ul {
@@ -227,13 +227,13 @@ a {
 	margin-left: 0px;
 }
 .article-toc .level_2 {
-	margin-left: 20px;
+	margin-left: 6px;
 }
 .article-toc .level_3 {
-	margin-left: 40px;
+	margin-left: 12px;
 }
 .article-toc .level_4 {
-	margin-left: 60px;
+	margin-left: 18px;
 }
 #sidebar .article-toc a.read{
 	color: #202020;
@@ -242,6 +242,16 @@ a {
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
+}
+.article-toc .toc-toggle{
+	display: inline-block;
+	width: 12px;
+	margin-right: 4px;
+	cursor: pointer;
+	color: var(--sidebar-text);
+}
+.article-toc ul ul{
+	margin-left: 12px;
 }
 /* index */
 .content{
