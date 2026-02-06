@@ -185,6 +185,9 @@ a {
 #tree ul ul {
 	display: none;
 }
+#tree li.directory.active > ul {
+	display: block;
+}
 #sidebar ul {
 	padding: 0px 5px 5px 20px;
 }
@@ -199,11 +202,11 @@ a {
 
 #sidebar ul li a:hover{
 	color: #202020;
-	border-bottom: 1px solid #202020;
+	border-bottom: none;
 }
 #sidebar .active a{
 	color: #202020;
-	border-bottom: 1px solid #202020;
+	border-bottom: none;
 }
 .article-toc ul li i {
 	color: var(--sidebar-text);
@@ -249,15 +252,6 @@ a {
 .index-li {
 	margin: 20px 0 0 0;
 	border-bottom: 1px solid var(--border);
-}
-.dir-post #index .index-li,
-.dir-page #index .index-li{
-	border-bottom: 0;
-}
-.dir-post #index,
-.dir-page #index{
-	border-bottom: 1px solid var(--border);
-	padding-bottom: 10px;
 }
 .index-li a{
 	color: var(--text);

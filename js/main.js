@@ -240,12 +240,30 @@ function clickTreeDirectory() {
   var treeActive = $("#tree .active");
   if (treeActive.length) {
     showActiveTree(treeActive, true);
+  } else {
+    // 目录页：展开当前目录
+    var dirActive = $("#tree li.directory.active");
+    if (dirActive.length) {
+      var subTree = dirActive.children("ul");
+      if (subTree.length) {
+        subTree.css("display", "block");
+      }
+      dirActive.children("a").find(".fa-plus-square-o")
+        .removeClass("fa-plus-square-o")
+        .addClass("fa-minus-square-o");
+      showActiveTree(dirActive, true);
+    }
   }
 
   // 点击目录，就触发折叠动画效果
   $(document).on("click", "#tree a[class='directory']", function (e) {
-    // 用来清空所有绑定的其他事件
-    e.preventDefault();
+    // 目录有页面时允许跳转，否则仅展开/收起
+    var href = $(this).attr("href");
+    if (!href || href === "#") {
+      e.preventDefault();
+    } else {
+      return;
+    }
 
     var icon = $(this).children(".fa");
     var iconIsOpen = icon.hasClass("fa-minus-square-o");
