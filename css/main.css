@@ -544,6 +544,15 @@ body.sidebar-resizing #search-input{
 	margin: 0.6em 0;
 	font-size: 1.12em;
 }
+#article-content .katex .scriptstyle {
+	font-size: 0.85em;
+}
+#article-content .katex .scriptscriptstyle {
+	font-size: 0.75em;
+}
+#article-content .katex .vlist > span[style*="top:"]:not([style*="top:-"]) {
+	transform: translateY(-0.08em);
+}
 #article-content .katex .mathit {
 	font-family: "KaTeX_Greek", "KaTeX_Main" !important;
 	font-weight: 400 !important;
