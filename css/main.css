@@ -545,13 +545,19 @@ body.sidebar-resizing #search-input{
 	font-size: 1.12em;
 }
 #article-content .katex .scriptstyle {
-	font-size: 0.85em;
+	font-size: 0.8em;
 }
 #article-content .katex .scriptscriptstyle {
-	font-size: 0.75em;
+	font-size: 0.7em;
 }
 #article-content .katex .vlist > span[style*="top:"]:not([style*="top:-"]) {
-	transform: translateY(-0.08em);
+	transform: translateY(-3mm);
+}
+#article-content .katex .op-limits .vlist > span[style*="top:"]:not([style*="top:-"]) {
+	transform: none;
+}
+#article-content .katex .op-limits .vlist {
+	transform: translateY(-4mm);
 }
 #article-content .katex .mathit {
 	font-family: "KaTeX_Greek", "KaTeX_Main" !important;
