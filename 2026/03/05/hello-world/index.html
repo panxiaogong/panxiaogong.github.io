@@ -71,7 +71,22 @@
 
 <body>
 	<header id="header">
-    <a id="title" href="/" class="logo">Hexo</a>
+  <div class="header-left">
+    <button id="sidebar-toggle" class="icon-btn" aria-label="Toggle Sidebar">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <a id="title" href="/" class="logo">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      <span>Hexo</span>
+    </a>
+  </div>
+
+  <div class="header-center">
+    <div class="header-search">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <input id="header-search-input" type="search" placeholder="Press Enter to search" />
+    </div>
+  </div>
 
 	<ul id="menu">
     
@@ -86,34 +101,36 @@
 	</ul>
 </header>
 
-	
-<div id="sidebar">
-	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
-	
-	<div id="site-toc">
-		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
-		<div id="tree">
-			
+	<div id="app-shell">
+		<aside id="sidebar">
+  <div class="sidebar-head">
+    <div class="sidebar-book">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      <span>Hexo</span>
+    </div>
+    <button id="sidebar-close" class="icon-btn" aria-label="Close Sidebar">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
 
-			
-							<ul>
-								<li class="file active">
-									<a href="/2026/03/05/hello-world/">
-                     
-										    hello-world
-                     
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-		</div>
-	</div>
-</div>
+  <div class="sidebar-search-wrap">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+  </div>
 
-	<!-- 引入正文 -->
-	<div id="content" class="content">
-		<h1 id="article-title">
+  <div class="sidebar-tree-wrap">
+    <nav id="tree">
+      
+
+      <ul><li class="file active"><a href="/2026/03/05/hello-world/">hello-world</a></li></ul>
+    </nav>
+  </div>
+</aside>
+		<div id="sidebar-overlay"></div>
+
+		<!-- 引入正文 -->
+		<main id="content" class="content">
+			<h1 id="article-title">
 	Hello World
 </h1>
 
@@ -179,6 +196,14 @@
 	
 </script>
 
+		</main>
+
+		<aside id="right-toc">
+			<div class="right-toc-inner">
+				<p class="right-toc-title">目录</p>
+				<nav id="right-toc-content"></nav>
+			</div>
+		</aside>
 	</div>
 	<div id="footer">
 	<p>
