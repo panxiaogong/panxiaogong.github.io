@@ -19,8 +19,23 @@
   --shadow-strong: 0 14px 28px rgba(32, 36, 43, 0.14);
   --shadow-soft: 0 8px 18px rgba(32, 36, 43, 0.09);
   --font-latin-math: "MJXTEX", "Latin Modern Roman", "STIX Two Text", "Times New Roman", serif;
-  --font-latin-math-italic: "MJXTEX-I", "MJXTEX", "Latin Modern Roman", "STIX Two Text", "Times New Roman", serif;
+  --font-latin-math-italic: "MJXTEX-I-Scaled", "MJXTEX-I", "MJXTEX", "Latin Modern Roman", "STIX Two Text", "Times New Roman", serif;
   --font-cn: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+}
+
+@font-face {
+  /* Same MathJax glyphs as formulas; scaled for Latin/Greek only. */
+  font-family: "MJXTEX-I-Scaled";
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+  size-adjust: 112%;
+  unicode-range:
+    U+0000-00FF,
+    U+0100-024F,
+    U+0250-02AF,
+    U+0370-03FF,
+    U+1E00-1EFF,
+    U+2C60-2C7F,
+    U+A720-A7FF;
 }
 
 * {
@@ -503,6 +518,7 @@ body.sidebar-open #sidebar-overlay {
   background: linear-gradient(180deg, var(--bg-surface-start) 0%, var(--bg-surface-end) 100%);
   box-shadow: var(--shadow-soft);
   font-family: var(--font-latin-math-italic), var(--font-cn);
+  font-size: 17px;
   font-weight: 400;
   font-synthesis: none;
 }
@@ -555,7 +571,7 @@ body.sidebar-open #sidebar-overlay {
 #article-content p {
   margin-bottom: 12px;
   color: var(--text-main);
-  font-size: 17px;
+  font-size: 1em;
 }
 
 #article-content ol,
@@ -588,6 +604,10 @@ body.sidebar-open #sidebar-overlay {
   color: #8ce9ff;
   font-family: "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
   font-size: 0.92em;
+}
+
+#article-content mjx-container[jax="CHTML"] {
+  font-size: 1.16em !important;
 }
 
 #article-content pre {
