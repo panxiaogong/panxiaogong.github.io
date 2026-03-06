@@ -34,7 +34,7 @@ function initSidebar() {
   syncSidebarState();
   $(window).on('resize', syncSidebarState);
 
-  $('#sidebar-toggle').on('click', function (e) {
+  $('#sidebar-toggle, #sidebar-toggle-mobile').on('click', function (e) {
     e.preventDefault();
     $body.toggleClass('sidebar-open');
   });
@@ -67,18 +67,18 @@ function initDirectoryTree() {
     e.preventDefault();
 
     var $link = $(this);
-    var $icon = $link.children('.fa');
+    var $directory = $link.parent('li.directory');
     var $subTree = $link.siblings('ul');
-    var isOpen = $icon.hasClass('fa-minus-square-o');
+    var isOpen = $directory.hasClass('is-open');
 
     if (!$subTree.length) return;
 
     if (isOpen) {
       $subTree.slideUp(120);
-      $icon.removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
+      $directory.removeClass('is-open');
     } else {
       $subTree.slideDown(120);
-      $icon.removeClass('fa-plus-square-o').addClass('fa-minus-square-o');
+      $directory.addClass('is-open');
     }
   });
 }
@@ -90,8 +90,8 @@ function initTreeSearch() {
 
   function collapseTree() {
     $tree.find('li').show();
+    $tree.find('li.directory').removeClass('is-open');
     $tree.find('ul ul').hide();
-    $tree.find('a.directory .fa').removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
   }
 
   function resetTree() {
@@ -124,9 +124,7 @@ function initTreeSearch() {
       $file.show();
       $file.parents('li.directory').show();
       $file.parents('ul').show();
-      $file.parents('li.directory').children('a.directory').children('.fa')
-          .removeClass('fa-plus-square-o')
-          .addClass('fa-minus-square-o');
+      $file.parents('li.directory').addClass('is-open');
     });
   }
 
@@ -175,9 +173,7 @@ function revealTreePath($nodeSet, includeSiblings) {
     $parentDirectories.each(function () {
       var $directory = $(this);
       $directory.show();
-      $directory.children('a.directory').children('.fa')
-          .removeClass('fa-plus-square-o')
-          .addClass('fa-minus-square-o');
+      $directory.addClass('is-open');
       $directory.children('ul').show();
 
       if (includeSiblings) {
