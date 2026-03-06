@@ -18,6 +18,8 @@
   --toc-width: 290px;
   --shadow-strong: 0 14px 28px rgba(32, 36, 43, 0.14);
   --shadow-soft: 0 8px 18px rgba(32, 36, 43, 0.09);
+  --font-latin-math: "MJXTEX", "Latin Modern Roman", "STIX Two Text", "Times New Roman", serif;
+  --font-latin-math-italic: "MJXTEX-I", "MJXTEX", "Latin Modern Roman", "STIX Two Text", "Times New Roman", serif;
   --font-cn: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
 }
 
@@ -500,6 +502,19 @@ body.sidebar-open #sidebar-overlay {
   border-radius: 16px;
   background: linear-gradient(180deg, var(--bg-surface-start) 0%, var(--bg-surface-end) 100%);
   box-shadow: var(--shadow-soft);
+  font-family: var(--font-latin-math-italic), var(--font-cn);
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+#article-content p,
+#article-content li,
+#article-content blockquote,
+#article-content table,
+#article-content th,
+#article-content td {
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 #article-content h1,
@@ -560,6 +575,10 @@ body.sidebar-open #sidebar-overlay {
   border-radius: 0 8px 8px 0;
   background: rgba(71, 83, 98, 0.08);
   color: #314155;
+}
+
+#article-content blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 #article-content code {
