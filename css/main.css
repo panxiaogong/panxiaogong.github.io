@@ -552,9 +552,21 @@ body.sidebar-open #sidebar-overlay {
 
 #article-content h2 {
   font-size: 29px;
-  margin: 24px 0 12px;
-  padding-left: 12px;
-  border-left: 3px solid var(--accent);
+  margin: 34px 0 4px;
+  padding-left: 0;
+  border-left: none;
+}
+
+#article-content h2 + p,
+#article-content h2 + ul,
+#article-content h2 + ol {
+  margin-top: 0;
+}
+
+#article-content h2 + blockquote,
+#article-content h2 + pre,
+#article-content h2 + table {
+  margin-top: 8px;
 }
 
 #article-content h3 {
@@ -637,6 +649,33 @@ body.sidebar-open #sidebar-overlay {
 
 #article-content .about-home {
   padding-top: 6px;
+}
+
+#article-content .about-home h2 {
+  position: relative;
+  margin-bottom: 2px;
+  line-height: 1.16;
+  padding-left: 14px;
+  border-left: none;
+}
+
+#article-content .about-home h2 + .about-card {
+  margin-top: 0;
+}
+
+#article-content .about-home .about-card + h2 {
+  margin-top: 34px;
+}
+
+#article-content .about-home h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.3em;
+  width: 3px;
+  height: 1.04em;
+  border-radius: 2px;
+  background: var(--accent);
 }
 
 #article-content .about-hero {
@@ -830,6 +869,14 @@ table th {
 
 #footer a {
   color: #bce8ff;
+}
+
+#footer .footer-author {
+  color: #000;
+}
+
+#footer .footer-author:hover {
+  color: #000;
 }
 
 /* Back to top */
@@ -1059,3 +1106,4 @@ table th {
     text-align: left;
   }
 }
+
