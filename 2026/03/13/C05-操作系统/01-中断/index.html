@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		01-中断 | 
+	 
+	Pan&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	
+		
+		
+		
+		
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260307-2">
+	<link rel="alternate icon" href="/favicon.ico?v=20260307-2">
+		
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	<script>
+		window.MathJax = {
+			tex: {
+				packages: {'[+]': ['ams']},
+				inlineMath: [['$', '$'], ['\\(', '\\)']],
+				displayMath: [['$$', '$$'], ['\\[', '\\]']],
+				processEscapes: true
+			},
+			startup: {
+				typeset: false
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			}
+		};
+
+		window.__typesetMath = function () {
+			if (!window.MathJax || typeof window.MathJax.typesetPromise !== 'function') return;
+			var container = document.getElementById('content') || document.body;
+			window.MathJax.typesetPromise([container]).catch(function (err) {
+				console.error('MathJax typeset failed:', err);
+			});
+		};
+
+		document.addEventListener('pjax:end', function () {
+			window.__typesetMath();
+		});
+		document.addEventListener('DOMContentLoaded', function () {
+			window.__typesetMath();
+		});
+	</script>
+	<script
+		id="MathJax-script"
+		async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		onload="window.__typesetMath()">
+	</script>
+
+	
+	
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+	<header id="header">
+  <div class="header-left">
+    <a id="title" href="/" class="logo">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      <span>Pan's Blog</span>
+    </a>
+  </div>
+
+	<ul id="menu">
+    <li class="menu-item sidebar-mobile-toggle">
+      <button id="sidebar-toggle-mobile" class="icon-btn" aria-label="Toggle Sidebar">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </li>
+
+    
+
+    
+
+    
+
+    
+  
+    
+	</ul>
+</header>
+
+	<div id="app-shell">
+		<aside id="sidebar">
+  <div class="sidebar-head">
+    <button id="sidebar-close" class="icon-btn" aria-label="Close Sidebar">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="sidebar-search-wrap">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+  </div>
+
+  <button id="sidebar-toggle" class="sidebar-float-toggle" aria-label="Toggle Sidebar">
+    <i class="fa fa-angle-left" aria-hidden="true"></i>
+  </button>
+
+  <div class="sidebar-tree-wrap">
+    <nav id="tree">
+      
+
+      
+
+      <ul><li class="directory"><a href="#" class="directory"><span>A01-线性代数</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A01-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A02-数学分析(上)</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A02-%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90(%E4%B8%8A)/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A03-数学分析(下)</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A03-%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90(%E4%B8%8B)/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A04-离散数学</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A04-%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/01-%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%81%E6%98%8E/">01-逻辑和证明</a></li><li class="file"><a href="/2026/03/06/A04-%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A05-组合学与图论</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A05-%E7%BB%84%E5%90%88%E5%AD%A6%E4%B8%8E%E5%9B%BE%E8%AE%BA/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A06-概率论与数理统计</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A06-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A07-公钥密码学的数学基础</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A07-%E5%85%AC%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A08-密码学概论</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/08/A08-%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%AE%BA/02-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/">02-古典密码</a></li><li class="file"><a href="/2026/03/10/A08-%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%AE%BA/03-%E5%AF%86%E7%A0%81%E5%AD%A6%E4%BF%A1%E6%81%AF%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">03-密码学信息理论基础</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>C05-操作系统</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file active"><a href="/2026/03/13/C05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/01-%E4%B8%AD%E6%96%AD/">01-中断</a></li></ul></li></ul>
+    </nav>
+  </div>
+</aside>
+
+		<div id="sidebar-overlay"></div>
+
+		<!-- 引入正文 -->
+		<main id="content" class="content">
+			<h1 id="article-title">
+	01-中断
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>潘小工</span>
+	<span>2026-03-13 22:16:31</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p>&emsp;&emsp;这似乎有一些奇怪，为什么上来就直接开始讲中断呢？毕竟这是一个原先从来没有接触过的概念，课上给出的原因是中断将会在未来的课程中反复的出现，所以要提前讲解好，方便以后遇到时理解，但也预示着这并不是一个简单或易理解的点。我们会通过一个小小的例子来阐明什么是中断，中断有哪几种以及大概是怎样实现的。</p>
+<h2 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h2><p>&emsp;&emsp;不妨我们有一个1+1&#x3D;2的C++程序，它长这个样子：</p>
+<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-type">int</span> a=<span class="hljs-number">1</span>;
+    <span class="hljs-type">int</span> b=<span class="hljs-number">1</span>;
+    <span class="hljs-type">int</span> c=a+b;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1+1=%d\n&quot;</span>,c);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+&#125;</code></pre>
+<p>&emsp;&emsp;我们来想想有哪些条件才能运行这个程序：显而易见的，我们需要这个程序本身，其次，这个程序不能直接命令硬件，所以我们需要操作系统，当然也需要计算机硬件，包括内存，CPU，显卡显示器等等，最后，我们需要用户(要不然谁来下达运行的命令呢？)，有了这些必要的条件之后， 这个程序是如何运行的起来的呢？(默认我们已经有了可执行文件)<br>&emsp;&emsp;首先，用户要告诉操作系统要执行这个程序，可以在命令行里调用(就是在终端里输个命令)，可以在图形界面调用(拿鼠标点一下)，或者是其他程序调用，操作系统得到命令之后，就会找到这个程序的文件信息和在硬盘中的存储位置，并进行检查(怎么检查并不是这里的重点)，之后它会创建一个新的进程(下文会解释)，设置CPU上下文环境，并跳到程序开始处，程序开始运行。<br>&emsp;&emsp;等等，看到这里似乎会让人有些头大，什么是进程？什么是上下文环境？什么跟什么这都是？我们知道操作系统会同时运行很多程序，比如现在你的电脑上似乎同时运行着微信和steam，所以它必须管理这些正在运行的程序，并且是十分精确地管理，如果把操作系统比作一个人的话，创建进程就类似于从书架上拿下一本书放到桌面上，下一步就是阅读这本书，也就是开始这个程序的运行。<br>&emsp;&emsp;但是等等，我开始阅读这本书了，那我刚才读的那本(之前运行的那个程序)怎么办？啥都不管就直接推到一边吗？那当然不行了，你至少得记录一下上一本书读到了第几页第几行吧，这就是设置CPU上下文环境(有些粗略但是大概可以这样理解)，就是记录一下上一本书的阅读状态，然后开启下一本书的阅读。<br>&emsp;&emsp;现在CPU要开始取出这个程序的第一条指令并开始运行了，但是很不幸，它并没有在物理内存中找到这个程序，为什么呢？这不得不提到现代操作系统的机制：按需加载(其实叫做按需分页)。操作系统不会一开始就把全部程序加载进内存，那样会造成浪费(要不然你的16&#x2F;32G内存的电脑怎么可能运行得了100多G的黑神话呢)，所以当CPU开始想取出程序的指令时，这个程序其实只被加载了小小的一部分，并不是全部都在内存中，但是现在CPU取不出想要的指令了，那该怎么办呢？</p>
+<blockquote>
+<p>其实写到这里时我突然发现我书架上有一本《操作系统真相还原》，翻看了一下我绝对这是一本绝世好书，所以决定阅读完这本书中断那一章节的内容再回来继续写我的这篇文档。</p>
+</blockquote>
+<p>&emsp;&emsp;既然需要的指令不在内存中，那当然无法继续运行了，所以，咔嚓！中断一下，操作系统会分配一页物理内存，将代码从磁盘读入到内存中，OK了，现在内存中有代码了，可以继续执行下去了，这次的中断就结束了。接下来会进行赋值，会进行计算，直到它运行到printf，这里又出问题了，因为printf的出现意味着要进行输出操作，并且最终可能显示在屏幕上，但是等等，一个小小的程序，怎么能直接操控显示屏这样的硬件呢？<br>&emsp;&emsp;当然是不能直接操控了，所以要由操作系统来搞定这个事情，但是操作系统搞定这件事(在屏幕上显示输出内容)肯定是要花时间的，那在这段时间内，CPU总不能一直等着吧，那太浪费了，所以操作系统要把原来的那个程序给中断掉，不能让CPU一直在它身上等着，CPU很忙，有很多别的事要做。操作系统在确定这是一个合法操作之后，将字符串1+1&#x3D;2交给用于处理显示的系统将其转换成像素，将像素写入显卡的存储映像区，然后显卡将像素转换成显示器可以接受的一组控制&#x2F;数据信号，激发液晶屏(渲染机制、存储映像区什么的看不懂也没关系，并不重要)，然后到这里，显示就结束了。<br>&emsp;&emsp;显示结束了，可是CPU知道它结束了吗？在整个过程中CPU似乎没有不断地去询问显示结束了没，前面也提到过，CPU很忙，没空过问你这里，那怎么告诉CPU呢？发信号，发一个很强势的信号，告诉CPU它该停一停然后来处理这里的事了，所以还是中断，CPU停下了手里正在干的活，然后意识到，哎，显示已经结束了。<br>&emsp;&emsp;CPU既然已经知道显示结束了，那原来的程序就可以继续运行了，printf函数就可以返回了，程序也就运行到了return 0;，整段程序也就结束了。</p>
+<blockquote>
+<p>为了使涉及到中断的这个例子更加通俗易懂，上述表达不可避免地损失了一些清晰度与严谨性，但是没有关系，具体的细节我们会在后文中非常详细地讲解，来弥补回这里的损失。</p>
+</blockquote>
+
+</div>
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+		</main>
+
+		<aside id="right-toc">
+			<div class="right-toc-inner">
+				<p class="right-toc-title">目录</p>
+				<nav id="right-toc-content"></nav>
+			</div>
+		</aside>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a class="footer-author" href="/">潘小工</a>
+	
+	
+	
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
