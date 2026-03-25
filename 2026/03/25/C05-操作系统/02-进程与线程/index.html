@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		02-进程与线程 | 
+	 
+	Pan&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+
+	<!-- favicon -->
+	
+	
+		
+		
+		
+		
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260307-2">
+	<link rel="alternate icon" href="/favicon.ico?v=20260307-2">
+		
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	<script>
+		window.MathJax = {
+			tex: {
+				packages: {'[+]': ['ams']},
+				inlineMath: [['$', '$'], ['\\(', '\\)']],
+				displayMath: [['$$', '$$'], ['\\[', '\\]']],
+				processEscapes: true
+			},
+			startup: {
+				typeset: false
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			}
+		};
+
+		window.__typesetMath = function () {
+			if (!window.MathJax || typeof window.MathJax.typesetPromise !== 'function') return;
+			var container = document.getElementById('content') || document.body;
+			window.MathJax.typesetPromise([container]).catch(function (err) {
+				console.error('MathJax typeset failed:', err);
+			});
+		};
+
+		document.addEventListener('pjax:end', function () {
+			window.__typesetMath();
+		});
+		document.addEventListener('DOMContentLoaded', function () {
+			window.__typesetMath();
+		});
+	</script>
+	<script
+		id="MathJax-script"
+		async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		onload="window.__typesetMath()">
+	</script>
+
+	
+	
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+	<header id="header">
+  <div class="header-left">
+    <a id="title" href="/" class="logo">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      <span>Pan's Blog</span>
+    </a>
+  </div>
+
+	<ul id="menu">
+    <li class="menu-item sidebar-mobile-toggle">
+      <button id="sidebar-toggle-mobile" class="icon-btn" aria-label="Toggle Sidebar">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </li>
+
+    
+
+    
+
+    
+
+    
+  
+    
+	</ul>
+</header>
+
+	<div id="app-shell">
+		<aside id="sidebar">
+  <div class="sidebar-head">
+    <button id="sidebar-close" class="icon-btn" aria-label="Close Sidebar">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="sidebar-search-wrap">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+  </div>
+
+  <button id="sidebar-toggle" class="sidebar-float-toggle" aria-label="Toggle Sidebar">
+    <i class="fa fa-angle-left" aria-hidden="true"></i>
+  </button>
+
+  <div class="sidebar-tree-wrap">
+    <nav id="tree">
+      
+
+      
+
+      <ul><li class="file"><a href="/2026/03/24/000-%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/">000-日常随笔</a></li><li class="directory"><a href="#" class="directory"><span>A01-线性代数</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A01-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A02-数学分析(上)</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A02-%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90(%E4%B8%8A)/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A03-数学分析(下)</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A03-%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90(%E4%B8%8B)/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A04-离散数学</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/23/A04-%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/01-%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%81%E6%98%8E/">01-逻辑和证明</a></li><li class="file"><a href="/2026/03/06/A04-%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A05-组合学与图论</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A05-%E7%BB%84%E5%90%88%E5%AD%A6%E4%B8%8E%E5%9B%BE%E8%AE%BA/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A06-概率论与数理统计</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A06-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A07-公钥密码学的数学基础</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/06/A07-%E5%85%AC%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/index/">index</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>A08-密码学概论</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/23/A08-%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%AE%BA/02-%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/">02-古典密码</a></li><li class="file"><a href="/2026/03/23/A08-%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%AE%BA/03-%E5%AF%86%E7%A0%81%E5%AD%A6%E4%BF%A1%E6%81%AF%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">03-密码学信息理论基础</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>C04-计算机网络</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/23/C04-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/01-%E6%A6%82%E8%BF%B0/">01-概述</a></li></ul></li><li class="directory"><a href="#" class="directory"><span>C05-操作系统</span><i class="fa fa-angle-right tree-arrow" aria-hidden="true"></i></a><ul><li class="file"><a href="/2026/03/23/C05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/01-%E4%B8%AD%E6%96%AD/">01-中断</a></li><li class="file active"><a href="/2026/03/25/C05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/02-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/">02-进程与线程</a></li></ul></li></ul>
+    </nav>
+  </div>
+</aside>
+
+		<div id="sidebar-overlay"></div>
+
+		<!-- 引入正文 -->
+		<main id="content" class="content">
+			<h1 id="article-title">
+	02-进程与线程
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>潘小工</span>
+	<span>2026-03-25 18:22:09</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>&emsp;&emsp;我们的计算机经常在同一时间做许多事情，比如你的电脑上也许正在同时运行着微信和steam，但是某一瞬间CPU只能运行一条指令，这条指令可能来自于程序A，也可能来自于程序B，所以某一瞬间你的CPU其实只执行着一个程序中的指令，但是在较长的时间下，比如1秒钟，CPU通过快速切换不同程序的执行，支持着好多程序的运行，给我们一种并行的错觉，那我们到底该如何管理这些看上去并行的东西呢？操作系统的开发者开发了用于描述并行的概念模型，就是我们接下来要提到的进程。</p>
+<blockquote>
+<p>我们在这一章中做的讨论都是针对于单核CPU的，至于单核与多核有什么不同，计算机组成与设计中已经提到过了，这里不再阐述。</p>
+</blockquote>
+<h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>&emsp;&emsp;在这个模型中，计算机上所有可运行的软件，通常也包括操作系统，被组织成若干<strong>顺序进程</strong>，简称为<strong>进程</strong>。一个进程就是一个正在执行的程序的实例，你现在就可以打开电脑上的任务管理器找到进程的页面，你可以在里面看到许许多多进程。</p>
+<p>&emsp;&emsp;按道理讲，每个进程的运行都需要CPU，但是这么多进程，CPU却只有一个，所以我们给每一个进程都安排一个虚拟的CPU，这样在研究任何一个进程时，只需要注意这个虚拟的CPU就可以了，而不需要注意真正的CPU实际上在众多进程中来回快速切换(这种快速切换被称作<strong>多道程序设计</strong>)。</p>
+<p>&emsp;&emsp;比如说我们现在内存中有四道程序，分别是A,B,C,D，那么这4道程序就会被抽象为4个拥有各自控制流程的进程，并且每个程序都独立地运行，这里所谓的“各自控制流程”，其实就是指每个程序都有他们自己的逻辑程序计数器，我们知道程序计数器能够指示程序运行到哪一步了，是程序控制非常好的体现，但是实际上只有一个物理程序计数器，只是在每个进程运行时，把它的逻辑程序计数器装入到实际的程序计数器中，就像是电脑阅卷，窗口永远都是那个窗口，但是窗口中呈现的试卷会来自不同的课程，要批哪一门课的卷子，就把那一门课的卷子调进窗口里看，非常相似的过程。那么等到程序结束或者暂停时，物理程序计数器中的值就会被保存到内存中该进程的逻辑程序计数器中。这样我们只要观察较长的一段时间，所有的进程都运行了，但是任意一个瞬间都只有一个进程在运行。</p>
+<p>&emsp;&emsp;这真的和电脑阅卷十分的相似，我愿把这个例子再提一遍，假设有个老师同时批阅四门课程的试卷，批阅不同课程的试卷可以理解为不同的进程，各个课程的批阅进度可以理解为不同进程的逻辑程序计数器，他在批阅课程A的试卷时，窗口里只需要显示课程A的批阅进度就可以了，等到批阅课程B的时候，窗口里再显示B的批阅进度，以此类推，我们明明只有一个阅卷窗口，但是却可以显示不同课程的批阅进度，而且在很长一段时间后，每一门课的试卷都被批阅了一些，但是任意一个瞬间他只是在批阅一门课程的试卷。</p>
+<blockquote>
+<p>我非常高兴能有阅卷这个例子突然出现在我脑袋里，而且我突然想到似乎后文中的线程也可以用这个例子来解释，真是苍天助我。</p>
+</blockquote>
+<p>&emsp;&emsp;进程和程序之间的关系是十分微妙的，课本上有一个非常生动形象的例子，一位科学家要做蛋糕，那么做蛋糕的食谱就是程序，阅读食谱，取来各种原料以及烘制蛋糕这一系列动作就是进程，其实我们能够注意到并不是所有的程序都会在某一时刻对应一个进程，毕竟有食谱不一定要必须做那道菜，但是进程却一定对应着某个程序，要想做菜必须得有思路(食谱)对吧。</p>
+<p>&emsp;&emsp;综上其实有这样一个思想：进程其实是一类活动，它有着输入(做蛋糕的原料)，输出(做出蛋糕)，程序(食谱)以及状态(做到哪一步了)。我们的CPU可以被若干个进程共享，它使用某种调度算法来决定何时停止一个进程的工作，并转而向另一个进程提供服务。</p>
+<p>&emsp;&emsp;另外需要注意的是，如果一个程序被运行了两遍，那么会被算作两个进程，这也不难理解，今天做蛋糕与昨天做蛋糕都是做蛋糕，但肯定不可能是一模一样的蛋糕。</p>
+<h3 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h3><p><strong>只有进程才能创建进程</strong>，我们下面会很好地阐述这一点。在阐述之前，我们先来看看有哪些事件会导致进程的创建，主要是以下四种事件：</p>
+<ul>
+<li>1.系统初始化</li>
+<li>2.正在运行的程序执行了创建进程的系统调用</li>
+<li>3.用户请求创建一个新进程</li>
+<li>4.一个批处理作业的初始化</li>
+</ul>
+<p>&emsp;&emsp;我们接下来会一个一个详细解释这四种事件：</p>
+<p><strong>系统初始化</strong></p>
+
+</div>
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+
+		</main>
+
+		<aside id="right-toc">
+			<div class="right-toc-inner">
+				<p class="right-toc-title">目录</p>
+				<nav id="right-toc-content"></nav>
+			</div>
+		</aside>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a class="footer-author" href="/">潘小工</a>
+	
+	
+	
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
