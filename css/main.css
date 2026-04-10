@@ -1106,4 +1106,18 @@ table th {
     text-align: left;
   }
 }
+.footer-beian {
+    margin: 6px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
 
+.footer-beian a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-beian a:hover {
+    text-decoration: underline;
+}
