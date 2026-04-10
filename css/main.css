@@ -1114,7 +1114,7 @@ table th {
 }
 
 .footer-beian a {
-    color: #000;
+    color: #000!important;
     text-decoration: none;
 }
 
